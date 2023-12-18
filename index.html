@@ -1,0 +1,75 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Bookmarker</title>
+    <!-- font -->
+    <link
+        href="https://fonts.googleapis.com/css2?family=PT+Sans+Caption:wght@400;700&family=Pacifico&family=Righteous&display=swap"
+        rel="stylesheet">
+    <!-- fontawsome -->
+    <link rel="stylesheet" href="css/all.min.css">
+    <!-- bootstrap -->
+    <link rel="stylesheet" href="css/bootstrap.min.css">
+    <!-- css -->
+    <link rel="stylesheet" href="css/style.css">
+
+</head>
+
+<body>
+
+    <main class="py-5 position-relative">
+        <div class="container d-flex flex-column justify-content-center align-items-center">
+            <h1 class="py-3 position-relative ">Bookmarker</h1>
+            <div
+                class="contant  w-100 d-flex flex-column justify-content-center align-items-center p-3 gap-4 py-3 mt-5 position-relative">
+                <h2>
+                    <i class="fa-solid fa-bookmark"></i>
+                    bookmark your favorit sites
+                    <i class="fa-solid fa-bookmark"></i>
+                </h2>
+                <div class="sit-nam w-100 py-3">
+                    <label for="siteName" class="pb-2 fw-semibold"> <i class="fa-solid fa-book-bookmark pe-2"></i> Site
+                        Name</label>
+                    <input type="text" oninput="regexName" id="siteName" class="form-control py-1" placeholder="Bookmark Name" required>
+                </div>
+
+                <div class="sit-nam w-100 py-3">
+                    <label for="siteUrl" class="pb-2 fw-semibold"> <i class="fa-solid fa-link pe-2"></i> Site
+                        URL</label>
+                    <input type="url" oninput="regexUrl" id="siteUrl" class="form-control py-1" placeholder="website URL" required>
+                </div>
+
+                <button class=" btn btn-submit  m-auto px-5" id="submitBtn"  onclick="submitSite()">submit</button>
+
+            </div>
+
+            <table class="table mt-4 text-center bg-light position-relative">
+                <thead>
+                    <tr>
+                        <th class="text-capitalize">index</th>
+                        <th class="text-capitalize">Website Name</th>
+                        <th class="text-capitalize">Visit</th>
+                        <th class="text-capitalize">Delete</th>
+                    </tr>
+                </thead>
+                <tbody id="tableData">
+
+                </tbody>
+            </table>
+
+
+        </div>
+
+
+
+    </main>
+
+ <!-- **************JS**************** -->
+    <script src="js/bootstrap.bundle.min.js"></script>
+    <script src="js/index.js"></script>
+</body>
+
+</html>
